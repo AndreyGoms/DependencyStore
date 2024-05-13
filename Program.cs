@@ -13,9 +13,12 @@ builder.Services.AddScoped(x
 
 //Caso não haja camada de interface, pode ser usado dessa maneira:
 //builder.Services.AddTransient<CustomerRepository>();
-builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
-builder.Services.AddTransient<IPromoCodeRepository, PromoCodeRepository>();
-builder.Services.AddTransient<IDeliveryFeeService, DeliveryFeeService>();
+// builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
+// builder.Services.AddTransient<IPromoCodeRepository, PromoCodeRepository>();
+// builder.Services.AddTransient<IDeliveryFeeService, DeliveryFeeService>();
+
+builder.Services.AddRepositories();
+builder.Services.AddServices();
 
 builder.Services.AddControllers();
 
